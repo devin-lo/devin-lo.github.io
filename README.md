@@ -1,1 +1,1 @@
-# simpleslots
+# <a href="/simpleSlots.html">simpleslots</a>
