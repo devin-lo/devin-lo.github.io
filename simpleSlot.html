@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> EECS1012: Lab 10 - computational thinking </title>
+  <link rel="stylesheet" type="text/css" href="devinDefault.css" title="style" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Uses seedrandom.js by David Bau for a PRNG with defineable seed -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.3.10/seedrandom.min.js"></script>
+  <script src="simpleSlot.js"></script>
+</head>
+<body>
+  <h2> Simple Slots </h2>
+
+  <hr />
+  <div id="slotWindow">
+
+  </div>
+  <br />
+  <div>
+    <button class="wager" onclick="wager(1)"> Bet 1 </button>
+    <button class="wager" onclick="wager(2)"> Bet 2 </button>
+    <button class="wager" onclick="wager(3)"> Bet 3 </button>
+    <p>Number of credits: <span id="wallet"></span></p>
+    <p id="log"></p>
+    <br />
+    <!-- https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click -->
+    <button id="newGame" onclick="window.location.reload();"> New Game </button><br /><br />
+  </div>
+  <footer> <a>Rules</a> Copyright 2020 Devin Lo </footer>
+</body>
+</html>

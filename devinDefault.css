@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  overflow:auto;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #262626; 
+  text-align:center;
+  color: floralwhite;
+}
+
+button { 
+  background-color: #404040;
+  color: linen;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#newGame {
+  visibility: hidden;
+}
+
+/* https://stackoverflow.com/a/14750390 */
+button:disabled,button[disabled] {
+  background-color: lightgrey;
+  color: slategrey;
+}
