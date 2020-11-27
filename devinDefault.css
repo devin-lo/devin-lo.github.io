@@ -26,3 +26,9 @@ button:disabled,button[disabled] {
   background-color: lightgrey;
   color: slategrey;
 }
+
+/* https://www.w3schools.com/howto/howto_css_table_center.asp */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
