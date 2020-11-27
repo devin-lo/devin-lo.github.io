@@ -4,7 +4,7 @@ var reels = [];
 reels[0] = ["m","r","s","c","k","p","r","s","c","k","p","m","s","c","k","m","r","s"];
 reels[1] = ["c","m","s","r","c","p","m","k","c","p","m","c","k","r","p","c","m","s"];
 reels[2] = ["m","p","s","k","p","r","c","m","p","r","c","m","p","r","c","m","p","s"];
-var wallet = 60;
+var wallet = 75;
 var reelPositions = [];
 var slotRng = 0;
 var myRng;
