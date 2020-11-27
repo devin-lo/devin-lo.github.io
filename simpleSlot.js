@@ -117,8 +117,18 @@ function wager(bet) {
         }
     }
     $("#wallet").text(wallet.toString());
+    checkButtons();
     if (wallet <= 0) {
         endGame();
+    }
+}
+
+function checkButtons() {
+    if (wallet < 3) {
+        $("#w3").prop('disabled',true);
+    }
+    if (wallet < 2) {
+        $("#w2").prop('disabled',true);
     }
 }
 
