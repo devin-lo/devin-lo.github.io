@@ -40,3 +40,11 @@ table, th, td {
 th, td {
   padding: 0.6em;
 }
+
+a:link {
+  color: #dbda9a;
+}
+
+a:visited {
+  color: #a0bda1;
+}
