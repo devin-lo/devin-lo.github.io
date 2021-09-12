@@ -63,7 +63,7 @@ let loadingEl = document.querySelector('.loading');
 // let isPlaying = false;
 setupSample()
     .then((samples) => {
-        loadingEl.style.display = 'none'; // remove loading screen
+        // loadingEl.style.display = 'none'; // remove loading screen
 
         // manual play
         // adapted from here: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key#example
