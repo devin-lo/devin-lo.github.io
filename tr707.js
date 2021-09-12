@@ -8,23 +8,24 @@ const audioCtx = new AudioContext();
 
 // filepaths of the samples
 // may need to put in another js file
-const filepaths = ['./simple707/samples/Kick 1 R1.wav',
-                   './simple707/samples/Kick 2 R1.wav',
-                   './simple707/samples/Snare 1 R1.wav',
-                   './simple707/samples/Snare 2 R1.wav',
-                   './simple707/samples/Tom 1 R1.wav',
-                   './simple707/samples/Tom 2 R1.wav',
-                   './simple707/samples/Tom 3 R1.wav',
-                   './simple707/samples/Rim R1.wav',
-                   './simple707/samples/Cowbell R1.wav',
-                   './simple707/samples/Clap R1.wav',
-                   './simple707/samples/Tambourine R1.wav',
-                   './simple707/samples/Hat Closed R1.wav',
-                   './simple707/samples/Hat Closed R1.wav',
-                   './simple707/samples/Hat Open R1.wav',
-                   './simple707/samples/Crash R1.wav',
-                   './simple707/samples/Ride R1.wav'
-                  ];
+const filepaths = [
+    './simple707/samples/Kick 1 R1.wav',
+    './simple707/samples/Kick 2 R1.wav',
+    './simple707/samples/Snare 1 R1.wav',
+    './simple707/samples/Snare 2 R1.wav',
+    './simple707/samples/Tom 1 R1.wav',
+    './simple707/samples/Tom 2 R1.wav',
+    './simple707/samples/Tom 3 R1.wav',
+    './simple707/samples/Rim R1.wav',
+    './simple707/samples/Cowbell R1.wav',
+    './simple707/samples/Clap R1.wav',
+    './simple707/samples/Tambourine R1.wav',
+    './simple707/samples/Hat Closed R1.wav',
+    './simple707/samples/Hat Closed R1.wav',
+    './simple707/samples/Hat Open R1.wav',
+    './simple707/samples/Crash R1.wav',
+    './simple707/samples/Ride R1.wav'
+];
 
 // this code snippet is taken directly from the tutorial
 // the purpose of this is to load the external audio file, and turn it into a buffer
@@ -38,7 +39,7 @@ async function getFile(audioContext, filepath) {
 // modified from the original by using a for loop to grab buffers of all the 707 sample sounds
 async function setupSample() {
     const samples = []; // const array can be pushed to - https://www.w3schools.com/js/js_const.asp
-    
+
     for (let i = 0; i < filepaths.length; i++) {
         samples.push(await getFile(audioCtx, filepaths[i]));
     }
@@ -65,12 +66,15 @@ setupSample()
     .then((samples) => {
         // loadingEl.style.display = 'none'; // remove loading screen
 
-        // manual play
-        // adapted from here: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key#example
-        window.addEventListener('keydown', function (event) {
-            audioCtx.resume().then(function(event) {
+        // https://developer.chrome.com/blog/autoplay/
+        window.addEventListener('click', function () {
+            context.resume().then(() => {
+                console.log('Playback resumed successfully');
+            });
 
-            
+            // manual play
+            // adapted from here: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key#example
+            window.addEventListener('keydown', function (event) {
                 if (event.defaultPrevented) {
                     return; // Do nothing if the event was already processed
                 }
