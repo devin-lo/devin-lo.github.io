@@ -68,7 +68,7 @@ setupSample()
 
         // https://developer.chrome.com/blog/autoplay/
         window.addEventListener('click', function () {
-            context.resume().then(() => {
+            audioCtx.resume().then(() => {
                 console.log('Playback resumed successfully');
             });
 
