@@ -2,7 +2,7 @@ function luiCalc() {
     var a = document.getElementById("inputNum").value;
     var probNum = parseInt(a);
 	
-	if (a >= -2147483648 && a <= 2147481599) {
+	if (a >= 0 && a <= 2147481599) { // -2147483648 but i'm having trouble with negative numbers rn OOPS
 		var rem = probNum % 4096;
 		var luiMod = 0;
 		if (rem > 2047 && rem < 4096) {
