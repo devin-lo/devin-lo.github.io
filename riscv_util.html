@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Lui and Addi value calculator </title>
+  <link rel="stylesheet" type="text/css" href="devinDefault.css" title="style" />
+  <script src="riscv_util.js"></script>
+</head>
+<body>
+    <form onsubmit="return false">
+        Specify the number to get the lui and addi values for: <br /><br />
+        <input id="inputNum" type="number" min="-2147483648" max="2147481599"/>
+        <input id="calculate" type="submit" onclick="luiCalc()"/>
+    </form>
+    <br />
+
+    <table class="center">
+      <tr>
+          <th>lui amount: </th>
+          <th id="lui"></th>
+      </tr>
+      <tr>
+          <th>addi amount: </th>
+          <th id="addi"></th>
+      </tr>
+    </table>
+    <br />
+
+    <footer>Copyright 2021 Devin Lo.</footer>
+</body>
+</html>
