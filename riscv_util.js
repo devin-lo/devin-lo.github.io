@@ -20,5 +20,8 @@ function luiCalc() {
 		document.getElementById("lui").innerHTML = luiAmt;
 		document.getElementById("addi").innerHTML = addiAmt;
 	}
-
+	else {
+		document.getElementById("lui").innerHTML = "";
+		document.getElementById("addi").innerHTML = "";
+	}
 }
