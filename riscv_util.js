@@ -11,14 +11,8 @@ function luiCalc() {
 		else if (rem < -2048 && rem > -4096) {
 			luiMod--;
 		}
-		var luiAmt = 0;
-		if (probNum >= 0) {
-			luiAmt = Math.floor(probNum / 4096);
-		}
-		else {
-			luiAmt = Math.ceil(probNum / 4096);
-		}
-		luiAmt += luiMod;
+		var luiAmt = Math.trunc(probNum / 4096) + luiMod;
+		
 		var addiAmt = rem;
 		if (addiAmt < -2048) {
 			addiAmt += 4096;
