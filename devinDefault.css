@@ -48,3 +48,8 @@ a:link {
 a:visited {
   color: #a0bda1;
 }
+
+#counter {
+	visibility: hidden;
+	height: 20px;
+}
